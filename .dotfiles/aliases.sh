@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Open common URLs
+[[ $(uname -s) == 'Linux' ]] && alias open='xdg-open'
 alias gh='open https://www.github.com'
 alias yt='open https://www.youtube.com'
 alias reddit='open https://www.reddit.com'
