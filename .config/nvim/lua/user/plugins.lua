@@ -35,10 +35,24 @@ packer.init {
 }
 
 return packer.startup(function(use)
+    -- basics
     use "wbthomason/packer.nvim"
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
+
+    -- colorscheme
     use {"catppuccin/nvim", as = "catppuccin"}
+
+    -- cmp
+    use "hrsh7th/nvim-cmp"             -- the completion plugin
+    use "hrsh7th/cmp-buffer"           -- buffer completions
+    use "hrsh7th/cmp-path"             -- path completions
+    use "hrsh7th/cmp-cmdline"          -- cmdline completions
+    use "saadparwaiz1/cmp_luasnip"     -- snippet completions
+
+    -- snippets
+    use "L3MON4D3/LuaSnip"             -- snippet engine
+    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
     if PACKER_BOOTSTRAP then
         require('packer').sync()
