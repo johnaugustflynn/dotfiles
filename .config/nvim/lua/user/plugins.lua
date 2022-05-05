@@ -60,6 +60,12 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig"           -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple to use language server nvim-lsp-installer
 
+    -- telescope
+    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+    use "BurntSushi/ripgrep"
+    use "nvim-telescope/telescope.nvim"
+    use "nvim-telescope/telescope-media-files.nvim"
+
     if PACKER_BOOTSTRAP then
         require('packer').sync()
     end
