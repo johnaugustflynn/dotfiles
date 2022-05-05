@@ -7,12 +7,12 @@ local options = {
     expandtab = true,
     shiftwidth = 4,
     undofile = true,
-    
+
     -- editor view
     cursorline = true,
     number = true,
     cmdheight = 2,
-    --doiwant? guifont = "monospace:h17", 
+    --doiwant? guifont = "monospace:h17",
 
     -- make buffer windows nicer
     splitbelow = true,
