@@ -52,7 +52,7 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
 
-    -- snippets
+    -- snippetsi
     use "L3MON4D3/LuaSnip"                -- snippet engine
     use "rafamadriz/friendly-snippets"    -- a bunch of snippets to use
 
@@ -60,8 +60,12 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig"           -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple to use language server nvim-lsp-installer
 
-    -- telescope
+    -- treesitter
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+    use "p00f/nvim-ts-rainbow"
+    use "nvim-treesitter/playground"
+
+    -- telescope
     use "BurntSushi/ripgrep"
     use "nvim-telescope/telescope.nvim"
     use "nvim-telescope/telescope-media-files.nvim"
