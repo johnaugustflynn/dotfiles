@@ -12,7 +12,7 @@ local options = {
     cursorline = true,
     number = true,
     cmdheight = 2,
-    --doiwant? guifont = "monospace:h17",
+    guifont = "monospace:h17",
 
     -- make buffer windows nicer
     splitbelow = true,
@@ -20,7 +20,7 @@ local options = {
     scrolloff = 8,
     sidescrolloff = 8,
     wrap = false,
-    mouse = "a",
+    -- mouse = "a",
 
     -- speed stuff up
     timeoutlen = 1000,
