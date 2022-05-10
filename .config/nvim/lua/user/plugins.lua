@@ -66,6 +66,10 @@ return packer.startup(function(use)
     use "p00f/nvim-ts-rainbow"
     use "nvim-treesitter/playground"
 
+    -- commenting
+    use "JoosepAlviste/nvim-ts-context-commentstring"
+    use "numToStr/Comment.nvim"
+
     -- telescope
     use "BurntSushi/ripgrep"
     use "nvim-telescope/telescope.nvim"
