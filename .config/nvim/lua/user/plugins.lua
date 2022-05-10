@@ -43,7 +43,7 @@ return packer.startup(function(use)
     -- colorscheme
     use {"catppuccin/nvim", as = "catppuccin"}
 
-    -- cmp
+    -- autocompletion
     use "hrsh7th/nvim-cmp"                -- the completion plugin
     use "hrsh7th/cmp-buffer"              -- buffer completions
     use "hrsh7th/cmp-path"                -- path completions
@@ -51,8 +51,9 @@ return packer.startup(function(use)
     use "saadparwaiz1/cmp_luasnip"        -- snippet completions
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
+    use "windwp/nvim-autopairs"
 
-    -- snippetsi
+    -- snippets
     use "L3MON4D3/LuaSnip"                -- snippet engine
     use "rafamadriz/friendly-snippets"    -- a bunch of snippets to use
 
