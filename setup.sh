@@ -1,13 +1,8 @@
 #!/usr/bin/env bash
 
+echo 'export ZDOTDIR=~/.config/zsh/' > ~/.zshenv
+
 [ ! -d ~/.config ] && mkdir ~/.config
-cp -R .dotfiles ~
-cp -R .config/nvim ~/.config
 
-if [ -f ~/.bash_profile ]
-then
-	cat .bash_profile >> ~/.bash_profile
-else
-	cp .bash_profile ~
-fi
-
+ln -sf "$PWD/config/zsh" ~/.config/  
+ln -sf "$PWD/config/nvim" ~/.config/
