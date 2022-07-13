@@ -1,4 +1,4 @@
-for file in .dotfiles/*.sh;
+for file in $ZDOTDIR/*.zsh;
 do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done
