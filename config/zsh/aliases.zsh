@@ -19,6 +19,7 @@ alias gl='git log --oneline --graph --decorate'
 # Navigation
 alias ll='ls -lhFG'
 alias la='ls -lhFGa'
+alias dotfiles='cd ~/Code/johnaugustflynn/dotfiles'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
