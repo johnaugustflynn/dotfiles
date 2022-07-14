@@ -27,5 +27,5 @@ alias .....='cd ../../../..'
 # Misc
 alias grep='grep --color=auto'
 alias nv='nvim'
-alias nvc='nvim ~/.config/nvim/init.vim'
+alias nvc='nvim ~/.config/nvim/'
 
