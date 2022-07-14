@@ -40,6 +40,9 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
 
+    -- statusline
+    use "nvim-lualine/lualine.nvim"
+
     -- colorscheme
     use {"catppuccin/nvim", as = "catppuccin"}
 
