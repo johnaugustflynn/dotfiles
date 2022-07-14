@@ -2,6 +2,9 @@
 
 eval $(/opt/homebrew/bin/brew shellenv)
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/johnflynn/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
