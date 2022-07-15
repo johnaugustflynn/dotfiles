@@ -1,4 +1,4 @@
-for file in $ZDOTDIR/{prompt,path,exports,aliases,functions}.zsh;
+for file in $ZDOTDIR/*.zsh;
 do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done
