@@ -40,6 +40,9 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
 
+    -- nvimtree
+    use 'kyazdani42/nvim-web-devicons'
+    use 'kyazdani42/nvim-tree.lua'
     -- statusline
     use "nvim-lualine/lualine.nvim"
 
