@@ -7,8 +7,10 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- better window navigation
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts) -- ":Lex 30<CR>"
+-- better navigation
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- ":Lex 30<CR>"
+keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)

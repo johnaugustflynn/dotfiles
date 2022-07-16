@@ -35,14 +35,18 @@ packer.init {
 }
 
 return packer.startup(function(use)
-    -- basics
+    -- dependencies
     use "wbthomason/packer.nvim"
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
-
-    -- nvimtree
     use 'kyazdani42/nvim-web-devicons'
+
+    -- file explorer
     use 'kyazdani42/nvim-tree.lua'
+
+    -- buffer "tabs"
+    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+
     -- statusline
     use "nvim-lualine/lualine.nvim"
 
