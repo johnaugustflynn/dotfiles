@@ -13,4 +13,8 @@ end
 -- 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 -- end
 
-lualine.setup()
+lualine.setup {
+    options = {
+        disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
+    }
+}
