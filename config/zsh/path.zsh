@@ -2,6 +2,9 @@
 
 eval $(/opt/homebrew/bin/brew shellenv)
 
+# Created by `pipx` on 2022-07-18 01:56:44
+export PATH="$PATH:/Users/johnflynn/.local/bin"
+
 . "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
