@@ -1,11 +1,11 @@
 local fn = vim.fn
 
 -- automatically install packer
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
     PACKER_BOOTSTRAP = fn.system({
-        'git', 'clone', '--depth', '1',
-        'https://github.com/wbthomason/packer.nvim', install_path
+        "git", "clone", "--depth", "1",
+        "https://github.com/wbthomason/packer.nvim", install_path
     })
     print "Installing packer. Close and reopen Neovim..."
     vim.cmd [[packadd packer.nvim]]
@@ -39,13 +39,13 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim"
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
-    use 'kyazdani42/nvim-web-devicons'
+    use "kyazdani42/nvim-web-devicons"
 
     -- file explorer
-    use 'kyazdani42/nvim-tree.lua'
+    use "kyazdani42/nvim-tree.lua"
 
     -- buffer "tabs"
-    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+    use {"akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons"}
 
     -- statusline
     use "nvim-lualine/lualine.nvim"
@@ -89,10 +89,10 @@ return packer.startup(function(use)
     use "lewis6991/gitsigns.nvim"
 
     -- terminal
-    use { "akinsho/toggleterm.nvim", tag = 'v2.*' }
+    use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
     if PACKER_BOOTSTRAP then
-        require('packer').sync()
+        require("packer").sync()
     end
 end)
 
