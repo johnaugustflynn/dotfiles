@@ -30,6 +30,7 @@ vim.keymap.set("v", "<A-k>", ":m .-2<CR>==")
 vim.keymap.set("v", "p", '"_dP')
 
 -- telescope
-vim.keymap.set("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
+vim.keymap.set("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files({hidden=true})<cr>")
+-- vim.keymap.set("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
 vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>")
 
