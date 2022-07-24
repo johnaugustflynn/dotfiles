@@ -47,6 +47,9 @@ return packer.startup(function(use)
     -- buffer "tabs"
     use {"akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons"}
 
+    -- better buffer closing
+    use "moll/vim-bbye"
+
     -- statusline
     use "nvim-lualine/lualine.nvim"
 
