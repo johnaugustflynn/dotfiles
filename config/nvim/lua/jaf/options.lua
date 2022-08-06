@@ -11,6 +11,7 @@ local options = {
     -- editor view
     cursorline = true,
     number = true,
+    relativenumber = true,
     cmdheight = 2,
     guifont = "monospace:h17",
 
