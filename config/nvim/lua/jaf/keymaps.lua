@@ -3,6 +3,9 @@ vim.keymap.set("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- source neovim lua script
+vim.keymap.set("n", "<leader><leader>x", ":source %<CR>")
+
 -- better navigation
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- ":Lex 30<CR>"
 vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>")
