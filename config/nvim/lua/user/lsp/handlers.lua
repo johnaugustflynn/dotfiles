@@ -80,7 +80,7 @@ local function lsp_keymaps(bufnr)
     vim.keymap.set("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
     vim.keymap.set("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
 
-    vim.cmd("command! Format execute 'lua vim.lsp.buf.format()'")
+    vim.cmd("command! Format execute 'lua vim.lsp.buf.format({ timeout_ms = 2000 })'")
 end
 
 M.on_attach = function(client, bufnr)
