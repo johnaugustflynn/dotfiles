@@ -73,6 +73,7 @@ return packer.startup(function(use)
     -- LSP
     use "neovim/nvim-lspconfig"           -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple to use language server nvim-lsp-installer
+    use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
     -- treesitter
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
