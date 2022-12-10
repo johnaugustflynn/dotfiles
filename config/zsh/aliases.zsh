@@ -15,6 +15,8 @@ alias gcam='git commit -am'
 alias gp='git push'
 alias gs='git status'
 alias gl='git log --oneline --graph --decorate'
+alias gn='git number --column'
+alias ga='git number add'
 
 # Navigation
 alias ll='ls -lhFG'
