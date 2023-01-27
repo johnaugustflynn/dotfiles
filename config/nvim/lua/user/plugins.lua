@@ -90,6 +90,7 @@ return packer.startup(function(use)
     use "nvim-telescope/telescope-media-files.nvim"
 
     -- git
+    use "tpope/vim-fugitive"
     use "lewis6991/gitsigns.nvim"
 
     -- terminal
