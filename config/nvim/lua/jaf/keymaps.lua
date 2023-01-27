@@ -34,6 +34,9 @@ vim.keymap.set("v", "<A-k>", ":m .-2<CR>==")
 -- keep pasting same yanked text
 vim.keymap.set("v", "p", '"_dP')
 
+-- Stay in indent mode
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 -- telescope
 vim.keymap.set("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files({hidden=true})<CR>")
 -- vim.keymap.set("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
