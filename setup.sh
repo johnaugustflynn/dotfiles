@@ -13,6 +13,6 @@ mkdir -p /usr/local/share/zsh/site-functions/
 
 [ ! -d ~/.config ] && mkdir ~/.config
 
-ln -sf "$PWD/config/zsh" ~/.config/ 
-ln -sf "$PWD/config/nvim" ~/.config/
+ln -sf "$PWD/zsh" ~/.config/ 
+ln -sf "$PWD/nvim" ~/.config/
 
