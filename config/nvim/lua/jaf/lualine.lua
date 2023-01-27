@@ -1,6 +1,6 @@
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
-	return
+    return
 end
 
 -- local branch = {
@@ -16,5 +16,6 @@ end
 lualine.setup {
     options = {
         disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
+        theme = "tokyonight"
     }
 }

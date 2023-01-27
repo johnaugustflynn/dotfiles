@@ -55,6 +55,7 @@ return packer.startup(function(use)
 
     -- colorscheme
     use {"catppuccin/nvim", as = "catppuccin"}
+    use "folke/tokyonight.nvim"
 
     -- autocompletion
     use "hrsh7th/nvim-cmp"                -- the completion plugin
