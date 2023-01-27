@@ -38,10 +38,10 @@ vim.keymap.set("v", "p", '"_dP')
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 -- telescope
-vim.keymap.set("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files({hidden=true})<CR>")
+vim.keymap.set("n", "<leader>sf", "<cmd>lua require'telescope.builtin'.find_files({hidden=true})<CR>")
 -- vim.keymap.set("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
-vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<CR>")
-vim.keymap.set("n", "<leader>d", "<cmd>Telescope diagnostics<CR>")
+vim.keymap.set("n", "<leader>sg", "<cmd>Telescope live_grep<CR>")
+vim.keymap.set("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>")
 
 -- vim-fugitive
 vim.cmd("command! -nargs=1 Gcam :G commit -am <args>")
