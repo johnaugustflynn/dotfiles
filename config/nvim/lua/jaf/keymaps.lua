@@ -41,5 +41,6 @@ vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<CR>")
 vim.keymap.set("n", "<leader>d", "<cmd>Telescope diagnostics<CR>")
 
 -- vim-fugitive
+vim.cmd("command! -nargs=1 Gcam :G commit -am <args>")
 vim.cmd("command! Gn :G number --column")
 vim.cmd("command! -nargs=1 Ga :G number add <args>")
