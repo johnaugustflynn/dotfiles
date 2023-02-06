@@ -17,6 +17,7 @@ alias gs='git status'
 alias gl='git log --oneline --graph --decorate'
 alias gn='git number --column'
 alias ga='git number add'
+alias gupdate='git checkout main && git pull && git checkout - && git rebase main'
 
 # Navigation
 alias ll='ls -lhFG'
