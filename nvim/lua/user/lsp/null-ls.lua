@@ -14,6 +14,6 @@ null_ls.setup {
         formatting.black.with { extra_args = { "--fast" } },
         formatting.isort.with { extra_args = { "--profile",  "black" } },
         formatting.jq,
-        diagnostics.pylint,
+        diagnostics.ruff,
     },
 }
