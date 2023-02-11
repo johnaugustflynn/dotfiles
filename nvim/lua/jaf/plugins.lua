@@ -37,39 +37,37 @@ return require("packer").startup(function(use)
     -- file explorer
     use "kyazdani42/nvim-tree.lua"
 
-    -- buffer "tabs"
-    use {"akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons"}
-
-    -- better buffer closing
-    use "moll/vim-bbye"
+    -- buffers
+    use "akinsho/bufferline.nvim"           -- "tabs"
+    use "moll/vim-bbye"                     -- better buffer closing
 
     -- statusline
     use "nvim-lualine/lualine.nvim"
 
-    -- colorscheme
+    -- colorschemes
     use {"catppuccin/nvim", as = "catppuccin"}
     use "folke/tokyonight.nvim"
     use "ellisonleao/gruvbox.nvim"
 
     -- autocompletion
-    use "hrsh7th/nvim-cmp"                -- the completion plugin
-    use "hrsh7th/cmp-buffer"              -- buffer completions
-    use "hrsh7th/cmp-path"                -- path completions
-    use "hrsh7th/cmp-cmdline"             -- cmdline completions
-    use "saadparwaiz1/cmp_luasnip"        -- snippet completions
+    use "hrsh7th/nvim-cmp"                  -- the completion plugin
+    use "hrsh7th/cmp-buffer"                -- buffer completions
+    use "hrsh7th/cmp-path"                  -- path completions
+    use "hrsh7th/cmp-cmdline"               -- cmdline completions
+    use "saadparwaiz1/cmp_luasnip"          -- snippet completions
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
     use "windwp/nvim-autopairs"
 
     -- snippets
-    use "L3MON4D3/LuaSnip"                -- snippet engine
-    use "rafamadriz/friendly-snippets"    -- a bunch of snippets to use
+    use "L3MON4D3/LuaSnip"                  -- snippet engine
+    use "rafamadriz/friendly-snippets"      -- a bunch of snippets to use
 
     -- LSP
-    use "neovim/nvim-lspconfig"           -- enable LSP
-    use "williamboman/mason.nvim"         -- manage language tooling
+    use "neovim/nvim-lspconfig"             -- enable LSP
+    use "williamboman/mason.nvim"           -- manage language tooling
     use "williamboman/mason-lspconfig.nvim"
-    use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+    use "jose-elias-alvarez/null-ls.nvim"   -- for formatters and linters
 
     -- treesitter
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
