@@ -1,40 +1,33 @@
-local fn = vim.fn
-
--- automatically install packer
-local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-    PACKER_BOOTSTRAP = fn.system({
-        "git", "clone", "--depth", "1",
-        "https://github.com/wbthomason/packer.nvim", install_path
-    })
-    print "Installing packer. Close and reopen Neovim..."
+-- bootstrap packer automatically
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
     vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
 end
 
--- reload neovim whenever you save the plugins.lua file
-vim.cmd [[
-    augroup packer_user_config
-      autocmd!
-      autocmd BufWritePost plugins.lua source <afile> | PackerSync
-    augroup end
-]]
+local packer_bootstrap = ensure_packer()
 
--- use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-    return
-end
+--[[ -- use a protected call so we don't error out on first use ]]
+--[[ local status_ok, packer = pcall(require, "packer") ]]
+--[[ if not status_ok then ]]
+--[[     return ]]
+--[[ end ]]
+--[[]]
+--[[ -- have packer use a popup window ]]
+--[[ packer.init { ]]
+--[[   display = { ]]
+--[[     open_fn = function() ]]
+--[[       return require("packer.util").float { border = "rounded" } ]]
+--[[     end, ]]
+--[[   }, ]]
+--[[ } ]]
 
--- have packer use a popup window
-packer.init {
-  display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
-    end,
-  },
-}
-
-return packer.startup(function(use)
+return require("packer").startup(function(use)
     -- dependencies
     use "wbthomason/packer.nvim"
     use "nvim-lua/popup.nvim"
@@ -99,7 +92,7 @@ return packer.startup(function(use)
     -- terminal
     use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
-    if PACKER_BOOTSTRAP then
+    if packer_bootstrap then
         require("packer").sync()
     end
 end)
