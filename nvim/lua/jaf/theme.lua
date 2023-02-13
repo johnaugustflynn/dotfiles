@@ -10,7 +10,13 @@ local lualine_ok, lualine = pcall(require, "lualine")
 if lualine_ok then
     lualine.setup {
         options = {
-            disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
+            disabled_filetypes = {
+                "alpha",
+                "dashboard",
+                "NvimTree",
+                "Outline",
+                "toggleterm",
+            },
             theme = colorscheme
         }
     }

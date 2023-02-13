@@ -18,9 +18,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>q", ":Bdelete<CR>")
 
--- terminal
-vim.keymap.set("n", "<leader>py", ":lua _IPYTHON_TOGGLE()<CR>")
-
 -- resize window with arrows
 vim.keymap.set("n", "<C-Up>", ":resize +2<CR>")
 vim.keymap.set("n", "<C-Down>", ":resize -2<CR>")
