@@ -13,9 +13,9 @@ local servers = {
     "gopls",
     "html",
     "jsonls",
+    "lua_ls",
     "pyright",
     "rust_analyzer",
-    "sumneko_lua",
     "tsserver",
 }
 
@@ -31,7 +31,7 @@ for _, server in pairs(servers) do
         capabilities = require("user.lsp.handlers").capabilities,
     }
 
-    if server == "sumneko_lua" then
+    if server == "lua_ls" then
         opts.settings = {
             Lua = {
                 diagnostics = {
