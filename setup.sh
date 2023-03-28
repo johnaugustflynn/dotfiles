@@ -15,4 +15,5 @@ mkdir -p /usr/local/share/zsh/site-functions/
 
 ln -sf "$PWD/zsh" ~/.config/ 
 ln -sf "$PWD/nvim" ~/.config/
+ln -sf "$PWD/xonsh" ~/.config/
 
