@@ -3,9 +3,6 @@ vim.keymap.set("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- source neovim lua script
-vim.keymap.set("n", "<leader><leader>x", ":source %<CR>")
-
 -- better navigation
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- ":Lex 30<CR>"
 vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>")
@@ -45,3 +42,13 @@ vim.keymap.set("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>")
 vim.cmd("command! -nargs=1 Gcam :G commit -am <args>")
 vim.cmd("command! Gn :G number --column")
 vim.cmd("command! -nargs=1 Ga :G number add <args>")
+
+-- run code from nvim
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+    pattern = { "*.py" },
+    callback = function() vim.keymap.set("n", "gx", ":!python %<CR>") end,
+})
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+    pattern = { "*.lua" },
+    callback = function() vim.keymap.set("n", "gx", ":source %<CR>") end,
+})
