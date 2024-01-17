@@ -1,4 +1,4 @@
-local colorscheme = "gruvbox"
+local colorscheme = "tokyonight"
 
 local color_cmd = "colorscheme " .. colorscheme .. " | hi Normal guibg=NONE ctermbg=NONE"
 local color_ok, _ = pcall(vim.cmd, color_cmd)
@@ -17,7 +17,7 @@ if lualine_ok then
                 "Outline",
                 "toggleterm",
             },
-            theme = colorscheme
+            theme = "auto" --colorscheme
         }
     }
 end
