@@ -14,6 +14,7 @@ local options = {
     relativenumber = true,
     cmdheight = 2,
     guifont = "monospace:h17",
+    termguicolors = true,
 
     -- make buffer windows nicer
     splitbelow = true,

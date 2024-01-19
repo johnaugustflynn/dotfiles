@@ -70,12 +70,11 @@ return require("packer").startup(function(use)
     use "jose-elias-alvarez/null-ls.nvim"   -- for formatters and linters
 
     -- treesitter
-    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+    use "nvim-treesitter/nvim-treesitter" --, run = ":TSUpdate" }
     use "p00f/nvim-ts-rainbow"
     use "nvim-treesitter/playground"
 
     -- commenting
-    use "JoosepAlviste/nvim-ts-context-commentstring"
     use "numToStr/Comment.nvim"
 
     -- telescope
