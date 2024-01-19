@@ -1,4 +1,3 @@
--- File Explorer
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -10,6 +9,11 @@ end
 local comment_ok, comment = pcall(require, "Comment")
 if comment_ok then
     comment.setup()
+end
+
+local outline_ok, outline = pcall(require, "outline")
+if outline_ok then
+    outline.setup()
 end
 
 require "user.cmp"

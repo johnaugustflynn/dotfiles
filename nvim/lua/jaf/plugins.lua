@@ -37,6 +37,9 @@ return require("packer").startup(function(use)
     -- file explorer
     use "kyazdani42/nvim-tree.lua"
 
+    -- code navigation
+    use "hedyhli/outline.nvim"
+
     -- buffers
     use "akinsho/bufferline.nvim"           -- "tabs"
     use "moll/vim-bbye"                     -- better buffer closing
