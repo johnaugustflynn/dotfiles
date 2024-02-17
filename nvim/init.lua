@@ -1,6 +1,10 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+require "jaf.plugins"
+require "jaf.options"
+require "jaf.keymaps"
+
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if status_ok then
     nvim_tree.setup()
@@ -61,6 +65,3 @@ require "user.lsp"
 require "user.telescope"
 require "user.treesitter"
 require "user.autopairs"
-require "jaf.plugins"
-require "jaf.options"
-require "jaf.keymaps"
