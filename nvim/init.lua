@@ -16,6 +16,13 @@ if outline_ok then
     outline.setup()
 end
 
+
+local bufferline_ok, bufferline = pcall(require, "bufferline")
+if bufferline_ok then
+    bufferline.setup()
+end
+
+
 require "user.cmp"
 require "user.lsp"
 require "user.telescope"
