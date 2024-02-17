@@ -33,6 +33,19 @@ if lualine_ok then
     }
 end
 
+local gitsigns_ok, gitsigns = pcall(require, "gitsigns")
+if gitsigns_ok then
+    gitsigns.setup {
+        signs = {
+            add          = { hl = "GitSignsAdd",    text = "▎",  numhl = "GitSignsAddNr",    linehl = "GitSignsAddLn" },
+            change       = { hl = "GitSignsChange", text = "▎",  numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+            delete       = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+            topdelete    = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+            changedelete = { hl = "GitSignsChange", text = "▎",  numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+        }
+    }
+end
+
 require "user.cmp"
 require "user.lsp"
 require "user.telescope"
@@ -41,5 +54,4 @@ require "user.autopairs"
 require "jaf.plugins"
 require "jaf.options"
 require "jaf.keymaps"
-require "jaf.gitsigns"
 require "jaf.toggleterm"
