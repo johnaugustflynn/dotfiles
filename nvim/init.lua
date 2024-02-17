@@ -46,6 +46,16 @@ if gitsigns_ok then
     }
 end
 
+local term_ok, toggleterm = pcall(require, "toggleterm")
+if not term_ok then
+    toggleterm.setup {
+        open_mapping = [[<c-\>]],
+        direction = "vertical",
+        size = vim.o.columns * 0.4
+    }
+end
+
+
 require "user.cmp"
 require "user.lsp"
 require "user.telescope"
@@ -54,4 +64,3 @@ require "user.autopairs"
 require "jaf.plugins"
 require "jaf.options"
 require "jaf.keymaps"
-require "jaf.toggleterm"
