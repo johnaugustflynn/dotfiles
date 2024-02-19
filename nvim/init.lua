@@ -1,3 +1,4 @@
+-- nvimtree requires these set first
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -59,7 +60,8 @@ if not term_ok then
     }
 end
 
-
+-- TODO: rewrite for myself
+-- copied from neovim-from-scratch
 require "user.cmp"
 require "user.lsp"
 require "user.telescope"
