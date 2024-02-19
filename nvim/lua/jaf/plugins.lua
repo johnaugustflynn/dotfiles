@@ -12,20 +12,20 @@ end
 
 local packer_bootstrap = ensure_packer()
 
---[[ -- use a protected call so we don't error out on first use ]]
---[[ local status_ok, packer = pcall(require, "packer") ]]
---[[ if not status_ok then ]]
---[[     return ]]
---[[ end ]]
---[[]]
---[[ -- have packer use a popup window ]]
---[[ packer.init { ]]
---[[   display = { ]]
---[[     open_fn = function() ]]
---[[       return require("packer.util").float { border = "rounded" } ]]
---[[     end, ]]
---[[   }, ]]
---[[ } ]]
+-- -- use a protected call so we don't error out on first use
+-- local status_ok, packer = pcall(require, "packer")
+-- if not status_ok then
+--     return
+-- end
+--
+-- -- have packer use a popup window
+-- packer.init {
+--   display = {
+--     open_fn = function()
+--       return require("packer.util").float { border = "rounded" }
+--     end,
+--   },
+-- }
 
 return require("packer").startup(function(use)
     -- dependencies
@@ -36,6 +36,12 @@ return require("packer").startup(function(use)
 
     -- file explorer
     use "kyazdani42/nvim-tree.lua"
+    use {
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
+        config = function() require('dashboard').setup() end,
+        requires = {'nvim-tree/nvim-web-devicons'}
+    }
 
     -- code navigation
     use "hedyhli/outline.nvim"
