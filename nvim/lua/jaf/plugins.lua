@@ -80,8 +80,6 @@ return require("packer").startup(function(use)
 
     -- treesitter
     use "nvim-treesitter/nvim-treesitter" --, run = ":TSUpdate" }
-    use "p00f/nvim-ts-rainbow"
-    use "nvim-treesitter/playground"
 
     -- commenting
     use "numToStr/Comment.nvim"
