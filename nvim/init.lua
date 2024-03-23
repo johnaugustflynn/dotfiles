@@ -26,7 +26,7 @@ if comment_ok then
     comment.setup()
 end
 
-local _, _ = pcall(vim.cmd, "colorscheme tokyonight")
+local _, _ = pcall(vim.cmd, "colorscheme onedark")
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 
 local lualine_ok, lualine = pcall(require, "lualine")

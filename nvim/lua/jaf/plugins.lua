@@ -57,6 +57,7 @@ return require("packer").startup(function(use)
     use {"catppuccin/nvim", as = "catppuccin"}
     use "folke/tokyonight.nvim"
     use "ellisonleao/gruvbox.nvim"
+    use 'navarasu/onedark.nvim'
 
     -- autocompletion
     use "hrsh7th/nvim-cmp"                  -- the completion plugin
