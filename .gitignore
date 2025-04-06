@@ -3,6 +3,7 @@
 
 # nvim
 packer_compiled.lua
+lazy-lock.json
 
 # zsh
 .zsh_history

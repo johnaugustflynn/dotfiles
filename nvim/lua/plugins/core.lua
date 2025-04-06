@@ -51,7 +51,7 @@ return {
     "akinsho/toggleterm.nvim",
     config = function()
       require("toggleterm").setup {
-        open_mapping = "[[C-\]]",
+        -- open_mapping = "[[C-\]]",
         -- direction = "vertical",
         -- size = vim.o.columns * 0.4
       }
@@ -67,5 +67,6 @@ return {
       vim.keymap.set("n", "<leader>m", grapple.toggle)
       vim.keymap.set("n", "<leader>M", grapple.toggle_tags)
       vim.keymap.set("n", "<leader>1", "<cmd>Grapple select index=1<CR>")
+    end
   },
 }
