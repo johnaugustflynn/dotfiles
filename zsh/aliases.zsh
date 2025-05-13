@@ -29,6 +29,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # Misc
+alias nvim='/opt/nvim-macos-arm64/bin/nvim'
 alias grep='grep --color=auto'
 alias nv='nvim'
 alias nvc='nvim ~/.config/nvim/'
